@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "commonjs",
+    "module": "ES6",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
@@ -9,13 +9,25 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts"
   ],
   "scripts": {
-    "start": "node src/index.ts",
+    "start": "ts-node src/index.ts",
     "build": "tsc"
   },
+  "name": "database",
+  "description": "Redis database code in the cloud",
+  "version": "1.0.0",
+  "main": "index.ts",
   "dependencies": {
-    "dotenv": "^16.4.5"
-  }
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
